@@ -47,8 +47,8 @@ section h2 {
 
 .video-container {
     position: relative;
-    width: 500px;
-    height: 360px;;
+    width: 500;
+    height: 360;
     margin: 0 auto;
 }
 
@@ -76,4 +76,7 @@ button {
 
 button:hover {
     background-color: #555;
+}
+.op{
+  text-align: center;
 }
