@@ -13,11 +13,16 @@
 
     <nav>
         <ul>
-            <li><a href="#" onclick="showSection('podcasts')"')">Podcastlerimiz</a></li>
+            <li><a href="#" onclick="showSection('podcasts')">Podcastlerimiz</a></li>
             <li><a href="#" onclick="showSection('aboutUs')">Biz Kimiz?</a></li>
             <li><a href="#" onclick="showSection('about')">Hakkımızda</a></li>
         </ul>
     </nav>
+
+  <div id="yell">
+    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Arama yapın...">
+    </div>
+    
 
     <section id="podcasts">
         <h2>Podcastlerimiz</h2>
@@ -28,14 +33,10 @@
             </video>
             
         </div>
-      <div>
-         <button onclick="changeVideo('https://firebasestorage.googleapis.com/v0/b/kamy-337cb.appspot.com/o/20ded41be0cbc28dde4a935374b7d136.mp4?alt=media&token=db688976-9cec-417f-b3ca-a6b597b1fe9a','https://firebasestorage.googleapis.com/v0/b/kamy-337cb.appspot.com/o/a4ab2dc2fb0f1f2d2efcc6847be89011.jpg?alt=media&token=42a9b7d4-e64a-4f72-bbe6-b97c30d1d8fb')">Mystrery at the hub</button>
-        <button onclick="changeVideo('https://firebasestorage.googleapis.com/v0/b/kamy-337cb.appspot.com/o/d4ef0170c06f0d6fae3860500bde2e49.mp4?alt=media&token=2a4942e0-ca4b-463e-81b5-23af2d81c654','https://firebasestorage.googleapis.com/v0/b/kamy-337cb.appspot.com/o/9a07474adb9303ae7396e0e623f276aa.jpg?alt=media&token=a6c1b796-f3ac-414f-a9a2-bf8369b5834a')">
-          Year of tiger
-          </button>
-          
-      </div>
-      
+        <div>
+            <button class="searchable" onclick="changeVideo('https://firebasestorage.googleapis.com/v0/b/kamy-337cb.appspot.com/o/20ded41be0cbc28dde4a935374b7d136.mp4?alt=media&token=db688976-9cec-417f-b3ca-a6b597b1fe9a','https://firebasestorage.googleapis.com/v0/b/kamy-337cb.appspot.com/o/a4ab2dc2fb0f1f2d2efcc6847be89011.jpg?alt=media&token=42a9b7d4-e64a-4f72-bbe6-b97c30d1d8fb')">Mystrery at the hub</button>
+            <button class="searchable" onclick="changeVideo('https://firebasestorage.googleapis.com/v0/b/kamy-337cb.appspot.com/o/d4ef0170c06f0d6fae3860500bde2e49.mp4?alt=media&token=2a4942e0-ca4b-463e-81b5-23af2d81c654','https://firebasestorage.googleapis.com/v0/b/kamy-337cb.appspot.com/o/9a07474adb9303ae7396e0e623f276aa.jpg?alt=media&token=a6c1b796-f3ac-414f-a9a2-bf8369b5834a')">Year of tiger</button>
+        </div>
     </section>
 
     <section id="aboutUs" style="display: none;">
@@ -44,18 +45,34 @@
            <p>
               Respic TR bir podcast platformudur. 
            </p>
-           
         </div>
-        
     </section>
 
     <section id="about" style="display: none;">
         <h2>Hakkımızda</h2>
-      <div class="op">
-        <p>Haydi,Spotify'ı ez!</p>
+        <div class="op">
+            <p>Haydi,Spotify'ı ez!</p>
         </div>
     </section>
 
     <script src="script.js"></script>
+
+    <script>
+        function searchFunction() {
+            var input, filter, buttons, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            buttons = document.getElementsByClassName('searchable');
+
+            for (i = 0; i < buttons.length; i++) {
+                txtValue = buttons[i].textContent || buttons[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    buttons[i].style.display = "";
+                } else {
+                    buttons[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
 </html>
