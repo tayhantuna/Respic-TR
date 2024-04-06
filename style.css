@@ -47,15 +47,17 @@ section h2 {
 }
 
 .video-container {
-    position: relative;
-    width: 500;
-    height: 360;
+    position: relative;;
+    width: 500px;
+    height: 360px;
     margin: 0 auto;
+  align-items: center;
+  
 }
 
 video {
     width: 100%;
-    height: 100%;
+    height: 90%;
 }
 
 .video-buttons {
@@ -83,4 +85,8 @@ button:hover {
 }
 #yell{
   text-align: center;
+}
+img{
+  widht: 100px;
+  height: 50px;
 }
