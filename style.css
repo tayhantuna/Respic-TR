@@ -96,8 +96,8 @@ button:hover {
   text-align: center;
 }
 img{
-  widht: 100px;
-  height: 50px;
+  widht: 12em;
+  height: 6em;
 }
 a:hover{
 color: #000000;
@@ -112,6 +112,7 @@ box-shadow:
   border-radius: 16px;
   border: none;
   padding: 10px;
+  width: 15em;
 }
 #searchInput:hover{
   color: #000000;
@@ -121,4 +122,8 @@ box-shadow:
 0 0 40px #c7c7c7,
 0 0 80px #c7c7c7,
 0 0 160px #c7c7c7
+}
+span p{
+  font-size: 1em;
+  font-weight: bold;
 }
