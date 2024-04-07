@@ -18,6 +18,8 @@ header h1 {
 }
 
 nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
     list-style-type: none;
     padding: 0;
     text-align: center;
@@ -31,7 +33,7 @@ nav ul li {
 nav ul li a {
 font-weight: bold;
 display: inline-block;
-font-size: 12px;
+font-size: 8px;
 color: black;
 background: #ffffff;
 padding: 10px 30px;
