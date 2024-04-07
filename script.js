@@ -21,3 +21,4 @@ function changeVideo(videoSrc, tn) {
     }
     all.style.display = "block";
 }
+//hawli
