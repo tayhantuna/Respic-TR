@@ -18,8 +18,9 @@ header h1 {
 }
 
 nav ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Dört eşit sütun */
+    display:flex;
+  flex-grow: 2;
+  
     list-style-type: none;
     padding: 0;
     text-align: center;
